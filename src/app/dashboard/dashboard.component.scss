@@ -1,6 +1,10 @@
 /* DashboardComponent's private CSS styles */
+$textFont: Arial, sans-serif;
+$textFontWeight: lighter;
 
 h2 {
+  font-family: $textFont;
+  font-weight: $textFontWeight;
   text-align: center;
 }
 

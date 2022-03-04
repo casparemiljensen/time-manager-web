@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  display: block;
+  margin: 0;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "a b c";
+}
+
+.main-content {
+  grid-area: b;
+}

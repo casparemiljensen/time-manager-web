@@ -1,4 +1,13 @@
 /* HeroesComponent's private CSS styles */
+
+$textFont: Arial, sans-serif;
+$textFontWeight: lighter;
+
+h2 {
+  font-family: $textFont;
+  font-weight: $textFontWeight;
+}
+
 .employees {
   margin: 0 0 2em 0;
   list-style-type: none;

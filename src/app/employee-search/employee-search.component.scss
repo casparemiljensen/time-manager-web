@@ -1,8 +1,13 @@
 /* EmployeeSearch private styles */
+$textFont: Arial, sans-serif;
+$textFontWeight: lighter;
+
+
 
 label {
   display: block;
-  font-weight: bold;
+  font-family: $textFont;
+  font-weight: $textFontWeight;
   font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: .5rem;

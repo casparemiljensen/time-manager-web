@@ -1,6 +1,27 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/employees">Employees</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="item-1">
+    <a routerLink="/">
+      <h1>{{title}}</h1>
+    </a>
+  </div>
+
+  <nav class="item-2">
+    <div class="sub-item-1">
+      <a routerLink="/dashboard">Dashboard</a>
+    </div>
+    <div class="sub-item-2">
+      <a routerLink="/employees">Employees</a>
+    </div>
+    <div class="sub-item-3">
+      <a routerLink="/employees">Employees2</a>
+    </div>
+    <div class="sub-item-4">
+      <a routerLink="/employees">Employees3</a>
+    </div>
+  </nav>
+</div>
+<div class="main-wrapper">
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

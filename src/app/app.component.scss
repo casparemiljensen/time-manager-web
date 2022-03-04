@@ -1,21 +1,85 @@
 /* AppComponent's private CSS styles */
+
+$textFont: Arial, sans-serif;
+$textFontWeight: lighter;
+
 h1 {
-  margin-bottom: 0;
+  color: white;
+  font-size: 16px;
+  font-family: $textFont;
+  font-weight: $textFontWeight;
 }
-nav a {
-  padding: 1rem;
+
+
+.container {
+  min-height: 50px;
+  background-color: #42545C;
+  justify-content: stretch;
+
+  display: grid;
+  grid-template-columns: 50px 150px auto 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "a b c d";
+}
+
+.item-1 {
+  grid-area: b;
+  align-self: center;
+  justify-self: left;
+}
+
+.item-1 a {
   text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: #e8e8e8;
-  color: #3d3d3d;
+}
+
+.item-2 {
+  grid-area: c;
+  display: grid;
+  justify-self: right;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "sub-a sub-b sub-c sub-d";
+}
+
+.sub-item-1 {
+  grid-area: sub-a;
+
+}
+
+.sub-item-2 {
+  grid-area: sub-b;
+
+}
+
+.sub-item-3 {
+  grid-area: sub-c;
+}
+
+.sub-item-4 {
+  grid-area: sub-d;
+}
+
+nav a {
+  font-family: $textFont;
+  font-size: 14px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
   border-radius: 4px;
 }
 
 nav a:hover {
-  color: white;
-  background-color: #42545C;
+  color: #42545C;
+  background-color: white;
 }
-nav a.active {
-  background-color: black;
+
+nav a:focus {
+  color: #42545C;
+  background-color: white;
 }
+
+

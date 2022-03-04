@@ -10,7 +10,7 @@ import { Employee } from './employee';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private employeesUrl = 'api/employees';  // URL to web api
+  private employeesUrl = 'https://localhost:7135/api/heroes';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
