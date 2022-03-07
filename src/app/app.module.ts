@@ -10,9 +10,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
-import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeDetailComponent } from './employees/employee-detail/employee-detail.component';
 import { EmployeesComponent } from './employees/employees.component';
-import { EmployeeSearchComponent } from './employee-search/employee-search.component';
+import { EmployeeSearchComponent } from './employees/employee-search/employee-search.component';
+import { TimeregistrationsComponent } from './timeregistrations/timeregistrations.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EmployeeSearchComponent } from './employee-search/employee-search.compo
     EmployeesComponent,
     EmployeeDetailComponent,
     DashboardComponent,
-    EmployeeSearchComponent
+    EmployeeSearchComponent,
+    TimeregistrationsComponent
   ],
   imports: [
     BrowserModule,

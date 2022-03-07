@@ -1,4 +1,4 @@
-import { Employee } from './employee';
+import { Employee } from './employees/shared/employee.model';
 
 export const EMPLOYEES: Employee[] = [
   { id: 11, name: 'Dr Nice' },

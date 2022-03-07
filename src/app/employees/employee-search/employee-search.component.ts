@@ -6,8 +6,8 @@ import {
   debounceTime, distinctUntilChanged, switchMap
 } from 'rxjs/operators';
 
-import { Employee } from '../employee';
-import { EmployeeService } from '../employee.service';
+import { Employee } from '../shared/employee.model';
+import { EmployeeService } from '../shared/employee.service';
 
 @Component({
   selector: 'app-employee-search',

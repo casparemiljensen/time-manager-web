@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Employee } from './employee';
+import { Employee } from './employee.model';
 
 @Injectable({
   providedIn: 'root'
