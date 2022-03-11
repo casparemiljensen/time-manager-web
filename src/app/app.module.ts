@@ -14,15 +14,17 @@ import { EmployeeDetailComponent } from './employees/employee-detail/employee-de
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeSearchComponent } from './employees/employee-search/employee-search.component';
 import { TimeregistrationsComponent } from './timeregistrations/timeregistrations.component';
+import { TimeregistrationDetailComponent } from './timeregistrations/timeregistration-detail/timeregistration-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
     EmployeeDetailComponent,
-    DashboardComponent,
     EmployeeSearchComponent,
-    TimeregistrationsComponent
+    DashboardComponent,
+    TimeregistrationsComponent,
+    TimeregistrationDetailComponent
   ],
   imports: [
     BrowserModule,

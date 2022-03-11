@@ -1,0 +1,16 @@
+<div *ngIf="timeregistration">
+  <h2>{{timeregistration.startTime | uppercase}} Details</h2>
+  <div><span>id: </span>{{timeregistration.id}}</div>
+  <div>
+    <label for="timeregistration-startTime">Start Time: </label>
+    <input id="timeregistration-startTime" [(ngModel)]="timeregistration.startTime" placeholder="startTime">
+    <br>
+    <label for="timeregistration-endTime">End Time: </label>
+    <input id="timeregistration-endTime" [(ngModel)]="timeregistration.endTime" placeholder="endTime">
+    <br>
+    <label for="timeregistration-employee">Employee: </label>
+    <input id="timeregistration-employee" [(ngModel)]="timeregistration.employeeId" placeholder="employeeId">
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="save()">save</button>
+</div>

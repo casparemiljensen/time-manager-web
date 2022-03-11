@@ -1,1 +1,36 @@
-<p>timeregistrations works!</p>
+<h2>My Timeregistrations</h2>
+<div>
+  <label for="new-timeregistration-startTime">Start Time: </label>
+  <input id="new-timeregistration-startTime" #timeregistrationStartTime />
+  <br>
+  <label for="new-timeregistration-endTime">End Time: </label>
+  <input id="new-timeregistration-endTime" #timeregistrationEndTime />
+
+  <label for="new-timeregistration-employee">Employees</label>
+  <div class="form-group">
+    <label for="employee">Employee:
+      <select id="employee" class="form-control" [(ngModel)]="selectedEmpMod" required>
+        <option *ngFor="let emp of employees" [ngValue]="emp">{{emp.name}}</option>
+      </select>
+    </label>
+  </div>
+
+  <br>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button"
+    (click)="add(timeregistrationStartTime.value, timeregistrationEndTime.value, selectedEmpMod.id); timeregistrationStartTime.value=''; timeregistrationEndTime.value=''">
+    Add timeregistration
+  </button>
+</div>
+
+<ul class="timeregistrations">
+  <li *ngFor="let timeregistration of timeregistrations">
+    <a routerLink="/timeregistrations/detail/{{timeregistration.id}}">
+      <span class="badge">{{timeregistration.id}}</span>
+      {{"Start Time: " + timeregistration.startTime}}
+      {{"End Time: " + timeregistration.endTime}}
+      {{"Employee: " + timeregistration.employeeId}}
+    </a>
+    <button type="button" class="delete" title="delete timeregistration" (click)="delete(timeregistration)">x</button>
+  </li>
+</ul>

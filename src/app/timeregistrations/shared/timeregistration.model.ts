@@ -1,9 +1,6 @@
-import { DatePipe } from "@angular/common";
-
-export interface Timeregistrations {
+export interface Timeregistration {
   id: number;
-  startTime: DatePipe;
-  endTime: DatePipe;
+  startTime: string;
+  endTime: string;
   employeeId: number;
-  location: number;
 }

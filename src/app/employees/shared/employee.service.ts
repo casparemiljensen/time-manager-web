@@ -10,7 +10,7 @@ import { Employee } from './employee.model';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private employeesUrl = 'https://localhost:7135/api/heroes';  // URL to web api
+  private employeesUrl = 'https://localhost:7118/api/employees';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -52,7 +52,7 @@ export class EmployeeService {
   }
 
   updateEmployee(employee: Employee): Observable<any> {
-    return this.http.put(this.employeesUrl, employee).pipe(
+    return this.http.put(this.employeesUrl + "/" + employee.id, employee).pipe(
       catchError(this.handleError<any>('updateEmployee'))
     );
   }
